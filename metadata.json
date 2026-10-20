@@ -1,0 +1,6 @@
+{
+  "name": "GỌI TÊN NGẪU NHIÊN - PHẠM HẬU",
+  "description": "Ứng dụng gọi tên ngẫu nhiên học sinh sôi động, công bằng và hiện đại - Tác giả: Phạm Hậu",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounceShort {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.25s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.3s ease-out forwards;
+  }
+
+  .animate-bounce-short {
+    animation: bounceShort 1.5s infinite ease-in-out;
+  }
+}
+
+/* Custom scrollbars for cosmic look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+/* MathType & LaTeX KaTeX styling for Cosmic Theme */
+.katex {
+  font-size: 1.05em;
+  text-rendering: auto;
+  color: inherit;
+}
+
+.katex-display {
+  margin: 0.5em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+.katex-math-wrapper {
+  vertical-align: -0.05em;
+  display: inline-block;
+  line-height: normal;
+}
+
+.katex .katex-html {
+  white-space: normal;
+}
+
+/* Ensure vector arrows (KaTeX extensible arrows \overrightarrow & accent arrows \vec) are fully visible */
+.katex .accent,
+.katex .accent-body,
+.katex .svg-align,
+.katex svg,
+.katex .stretchy,
+.katex .mord.accent {
+  overflow: visible !important;
+}
+
